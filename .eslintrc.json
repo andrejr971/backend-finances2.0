@@ -1,0 +1,17 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true
+  },
+  "plugins": ["prettier"],
+  "extends": ["standard", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "globals": {
+    "use": true
+  },
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}

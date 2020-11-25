@@ -1,0 +1,45 @@
+<style>
+  .message-content {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content span {
+    font-size: 15px;
+    color: #9a9a9b;
+  }
+
+  .content div {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="message-content">
+  <h1>Novo acesso à Finances</h1>
+  <p>Olá, {{ name }}</p>
+  <p>Nós detectamos um novo acesso à sua conta Finances ({{ email }}).</p>
+  <div class="content">
+    <span>Aparelho</span>
+    <div>{{ device || 'Chrome' }}</div>
+  </div>
+  <div class="content">
+    <span>Hora</span>
+    <div>{{ time }}</div>
+  </div>
+  <p>
+    Se você efetuou um acesso recentemente, é só relaxar e continuar!
+    Mas, se você não reconhece este acesso, recomendamos que <a href="{{ link }}">altere sua senha</a>
+    imediatamente para proteger sua conta.
+  </p>
+  <p>
+    Obrigado!<br />
+    <strong>[Equipe Finances]</strong>
+  </p>
+</div>
