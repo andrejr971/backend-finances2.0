@@ -3,6 +3,7 @@ const { v4: uuid } = require('uuid')
 
 const User = use('App/Models/User')
 const UserToken = use('App/Models/UserToken')
+const Env = use('Env')
 
 const Mail = use('Mail')
 
@@ -37,7 +38,7 @@ class ForgotPasswordController {
       'emails/forgot_password',
       {
         name: user.name,
-        link: `http://localhost:3000/reset-password?token=${token}`,
+        link: `${Env.get('APP_WEB')}/reset-password?token=${token}`,
       },
       (message) => {
         message

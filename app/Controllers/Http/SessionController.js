@@ -4,6 +4,7 @@ const { pt } = require('date-fns/locale')
 
 const User = use('App/Models/User')
 const Mail = use('Mail')
+const Env = use('Env')
 
 class SessionController {
   async store({ request, response, auth }) {
@@ -26,7 +27,7 @@ class SessionController {
         'emails/access_new',
         {
           name: user.name,
-          link: `http://localhost:3000/forgot-password`,
+          link: `${Env.get('APP_WEB')}/forgot-password`,
           device,
           email: user.email,
           time: format(new Date(), "dd 'de' MMMM 'de' yyyy 'às' HH:mm", {
