@@ -4,7 +4,7 @@ const File = use('App/Models/File')
 const User = use('App/Models/User')
 const Helpers = use('Helpers')
 
-const fs = require('fs')
+// const fs = require('fs')
 
 class UpdateAvatarUserController {
   async store({ request, auth, response }) {
@@ -18,23 +18,25 @@ class UpdateAvatarUserController {
 
     const user = await User.findOrFail(auth.user.id)
 
-    if (user.file_id) {
-      await user.preload('avatar')
+    // if (user.file_id) {
+    //   await user.load('avatar')
 
-      const filePath = Helpers.tmpPath(`uploads/${user.avatar.file}`)
+    //   const filePath = Helpers.tmpPath(`uploads/${user.avatar.file}`)
 
-      try {
-        await fs.promises.stat(filePath)
-      } catch {
-        return
-      }
+    //   console.log(filePath)
 
-      const existFile = await File.findOrFail(user.file_id)
+    //   // try {
+    //   await fs.promises.stat(filePath)
+    //   // } catch {
+    //   //   return
+    //   // }
 
-      await fs.promises.unlink(filePath)
+    //   const existFile = await File.findOrFail(user.file_id)
 
-      await existFile.delete()
-    }
+    //   await fs.promises.unlink(filePath)
+
+    //   await existFile.delete()
+    // }
 
     const upload = request.file('file', {
       size: '2mb',

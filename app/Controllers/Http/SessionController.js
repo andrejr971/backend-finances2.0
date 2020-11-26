@@ -23,7 +23,7 @@ class SessionController {
     if (userAgent) {
       const device = detector.parseClient(userAgent).name
 
-      Mail.send(
+      await Mail.send(
         'emails/access_new',
         {
           name: user.name,

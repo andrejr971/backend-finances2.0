@@ -1,27 +1,58 @@
-# Adonis API application
+<h1 align="center">
+    Point Counter
+</h1>
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+<br>
 
-## Setup
+<p align="center">
+  <img alt="image" src=".github/initial.png" width="100%">
+</p>
 
-Use the adonis command to install the blueprint
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [Adonis](https://adonisjs.com)
+
+## 💻 Projeto
+
+No bootcamp GoStack da Rockeseat, devenvolvemos uma aplicação GoFinances, e afim de aperfeiçoar o conhecimento adquirido, resolvi fazer um upgrade na aplicação, assim surgiu o Finances.
+
+### Setup
+
+
+Use o comando adonis para instalar
 
 ```bash
-adonis new yardstick --api-only
+npm install
 ```
 
-or manually clone the repo and then run `npm install`.
+#### Migrations
 
-### Migrations
-
-Run the following command to run startup migrations.
+Execute o seguinte comando para executar migrações de inicialização.
 
 ```js
 adonis migration:run
 ```
+
+
+Link para o [frontend](https://github.com/andrejr971/frontend-finances)
+
+
+<p align="center">
+  <img alt="image" src=".github/screen1.png" width="100%">
+</p>
+<p align="center">
+  <img alt="image" src=".github/screen2.png" width="100%">
+</p>
+
+---
+
+Feito by André Junior :wave: [portifólio](https://andrejr.dev)
+
+
