@@ -1,5 +1,5 @@
 <h1 align="center">
-    Point Counter
+    Finances
 </h1>
 
 <p align="center">
